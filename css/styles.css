@@ -290,3 +290,11 @@ a {
 .recover-password {
   margin-left: 2px;
 }
+
+input {
+  user-select: none;
+}
+
+#terminos {
+  margin-right: 7px;
+}
