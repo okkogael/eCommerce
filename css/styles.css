@@ -135,7 +135,9 @@ body {
   .logo img {
     display: block;
   }
-
+  .form-group input {
+    width: 100% !important;
+  }
 }
 
 /* Navbar con Mobile Menu */
