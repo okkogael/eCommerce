@@ -19,6 +19,7 @@ body {
     background: linear-gradient(to right, rgb(255, 170, 0), rgb(255, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 150%;
 }
 
 .card-header a {
@@ -40,7 +41,7 @@ body {
 /* Cards */
 
 .card {
-  width: 18%;
+  width: 80%;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -49,7 +50,7 @@ body {
 }
 
 .card-carrito {
-  width: 80%;
+  width: 70%;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -67,7 +68,7 @@ body {
 }
 
 .card-ingreso {
-  width: 65%;
+  width: 55%;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -94,10 +95,10 @@ body {
   color: #fff;
   text-align: center;
   background: linear-gradient(to right, #ff9041, #d72607);
-  text-decoration: none;
-  margin-top: 30px;
   padding: 10px 5px;
+  width: 100%;
   transition: 0.3s;
+  border: none;
 }
 
 .card-body .btn:hover {
@@ -112,70 +113,6 @@ body {
 .titulo-producto {
   margin-bottom: 20px;
 }
-
-/* Responsive Media Queries */
-
-@media screen and (max-width: 1000px) {
-  .card {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .container {
-    width: 100%;
-  }
-  .heading {
-    padding: 20px;
-    font-size: 30px;
-  }
-  .card {
-    width: 80%;
-  }
-  .logo img {
-    display: block;
-  }
-  .form-group input {
-    width: 100% !important;
-  }
-}
-
-/* Navbar con Mobile Menu */
-@media screen and (min-width: 768px) {
-  
-  .navbar {
-    background: white;
-    box-shadow: 0px 0px 10px #cfd8dc;
-    padding: 1rem 0;
-    border-radius: 0.2rem;
-    align-items: center;
-    display: flex;
-  }
-
-  #main-nav {
-    display: flex !important;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  #main-nav li {
-    margin: 0;
-  }
-
-  .nav-links {
-    margin-left: 40px;
-  }
-
-  #logo {
-    margin-top: 0;
-  }
-
-  #navbar-toggle {
-    display: none;
-  }
-
-} 
 
 /* Comienzo de la NavBar */
 
@@ -208,7 +145,7 @@ body {
   #logo:hover,
   .nav-links:hover {
     color: orange;
-	scale(1.05);
+	  scale: (1.05);
   }
   
   #logo {
@@ -225,10 +162,6 @@ body {
     cursor: pointer;
     color: black;
     font-size: 24px;
-  }
-  
-  #navbar-toggle:hover {
-    scale(1.05);
   }
 
 /* Utilizamos nuestro logo. */
@@ -309,7 +242,8 @@ body {
 }
 
 .form-group input {
-  width: 60%;
+  text-align: center;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -317,7 +251,7 @@ body {
 
 a {
   color: rgb(255, 119, 0);
-  text-decoration: none; /* Si deseas eliminar el subrayado de los enlaces */
+  text-decoration: none;
 }
 
 .recover-password {
@@ -328,8 +262,13 @@ input {
   user-select: none;
 }
 
-#terminos {
-  margin-right: 7px;
+#div-terminos {
+  margin-bottom: 20px;
+  letter-spacing: 100%;
+}
+
+input#terminos {
+  margin-right: 5px;
 }
 
 img.card-header {
@@ -354,7 +293,7 @@ img.card-header {
 }
 
 .product-image img {
-  max-width: 140%;
+  max-width: 100%;
   height: auto;
   max-height: 500px;
 }
@@ -372,7 +311,7 @@ img.card-header {
 
 .product-description {
   margin: 10px 0;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
 .product-price {
@@ -386,3 +325,54 @@ img.card-header {
   font-size: 1em;
   color: #555;
 }
+
+/* Responsive Media Queries */
+
+@media screen and (min-width: 621px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .card {
+    width: 18%;
+  }
+}
+
+/* Navbar con Mobile Menu */
+@media screen and (min-width: 768px) {
+  
+  .navbar {
+    background: white;
+    box-shadow: 0px 0px 10px #cfd8dc;
+    padding: 1rem 0;
+    border-radius: 0.2rem;
+    align-items: center;
+    display: flex;
+  }
+
+  #main-nav {
+    display: flex !important;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  #main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  #logo {
+    margin-top: 0;
+  }
+
+  #navbar-toggle {
+    display: none;
+  }
+
+} 

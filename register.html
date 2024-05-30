@@ -47,7 +47,7 @@
       <div class="row">
         <div class="card-ingreso">
           <div class="card-body">
-                <form class="registration-form">
+                <form class="registration-form" action="/submit_form" method="POST">
                 <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -64,11 +64,13 @@
                         <label for="confirm-password">Confirmar Contraseña</label>
                         <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-                <input type="checkbox" id="terminos" name="terminos">
-                Acepto los términos y condiciones
+                <div id="div-terminos">
+                  <input type="checkbox" id="terminos" name="terminos">
+                  Acepto todos los términos y condiciones
+                </div>
+                <button class="btn" type="submit">Registrarme</button>
                 </form>
                 <p class="center">Ya tenes cuenta? <a href="login.html">Iniciar Sesión</a></p>
-            <a type="submit" class="btn">Registrarme</a>
           </div>
         </div>
       </div>
