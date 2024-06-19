@@ -21,13 +21,13 @@
     </span>
     <ul id="main-nav">
         <li class="nav-item">
-            <a href="category.html" class="nav-links">Electrónica</a>
+            <a href="category.html?category=electronics" class="nav-links">Electrónica</a>
         </li>
         <li class="nav-item">
-            <a href="category.html" class="nav-links">Accesorios</a>
+            <a href="category.html?category=jewelery" class="nav-links">Accesorios</a>
         </li>
         <li class="nav-item">
-            <a href="category.html" class="nav-links">Hombre</a>
+            <a href="category.html?category=men's clothing" class="nav-links">Hombre</a>
         </li>
         <li class="nav-item">
             <a href="login.html" class="nav-links">Mujer</a>
@@ -51,22 +51,27 @@
                 <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                         <label for="email">Correo electrónico</label>
                         <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                         <label for="password">Contraseña</label>
                         <input type="password" id="password" name="password" required>
+                        <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                         <label for="confirm-password">Confirmar Contraseña</label>
                         <input type="password" id="confirm-password" name="confirm-password" required>
+                        <span class="error-message"></span>
                 </div>
                 <div id="div-terminos">
-                  <input type="checkbox" id="terminos" name="terminos">
-                  Acepto todos los términos y condiciones
+                  <input type="checkbox" id="terminos" name="terminos" required>
+                  <label for="terminos">Acepto todos los términos y condiciones</label>
+                  <span class="error-message"></span>
                 </div>
                 <button class="btn" type="submit">Registrarme</button>
                 </form>
@@ -82,6 +87,6 @@
   </footer>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script src="js/register.js"></script>
   </body>
 </html>
