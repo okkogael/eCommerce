@@ -14,6 +14,12 @@ body {
   margin: 50px auto;
 }
 
+.container-cart {
+  width: 90%;
+  margin: 50px auto;
+  height: 65vh; /* 100% del viewport height */
+}
+
 .interes {
     font-weight: bold;
     background: linear-gradient(to right, rgb(255, 170, 0), rgb(255, 0, 0));
@@ -99,6 +105,19 @@ body {
   width: 100%;
   transition: 0.3s;
   border: none;
+  margin-top: 15px;
+}
+
+#finalize-purchase {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right, #ff9041, #d72607);
+  padding: 10px 5px;
+  width: 100%;
+  transition: 0.3s;
+  border: none;
+  margin-top: 15px;
 }
 
 .card-body .btn:hover {
@@ -208,6 +227,16 @@ body {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+.cart-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 405px;
+}
+
 .footer-item {
   flex: 1;
   margin: 5px;
@@ -231,6 +260,39 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+
+/* Errores del Login y Register */
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.8em;
+}
+
+/* Extras Register */
+
+.hidden {
+  display: none;
+}
+
+.btn.recover {
+  margin-bottom: 15px;
+}
+
+#div-recover {
+  margin-bottom: 20px;
+  letter-spacing: 100%;
+}
+
+input#recover {
+  margin-right: 5px;
+}
+
+/* Fin Extras */
 
 .form-group {
   margin-bottom: 20px;
@@ -326,6 +388,31 @@ img.card-header {
   color: #555;
 }
 
+/* Nuevas reglas entrega II */ 
+
+.titulo-producto {
+  height: 70px; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Número de líneas permitidas */
+  -webkit-box-orient: vertical;
+}
+
+.card-body p {
+  height: 50px; /* Ajusta la altura según sea necesario */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Número de líneas permitidas */
+  -webkit-box-orient: vertical;
+}
+
+#product-description {
+  height: 100% !important;
+  display: block; /* Mostramos el texto entero */
+}
+
 /* Responsive Media Queries */
 
 @media screen and (min-width: 621px) {
@@ -375,4 +462,4 @@ img.card-header {
     display: none;
   }
 
-} 
+}
