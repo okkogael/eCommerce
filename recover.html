@@ -6,66 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucrum</title>
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css"> 
-    
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="logo first-child">
-        <a href="index.html"><img src="img/logo.png" title="Home" alt="Logo"></a>
-    </div>
-    <span id="navbar-toggle">
-        <i class="fas fa-bars"></i>
-    </span>
-    <ul id="main-nav">
-        <li class="nav-item">
-            <a href="category.html" class="nav-links">Electrónica</a>
-        </li>
-        <li class="nav-item">
-            <a href="category.html" class="nav-links">Accesorios</a>
-        </li>
-        <li class="nav-item">
-            <a href="category.html" class="nav-links">Hombre</a>
-        </li>
-        <li class="nav-item">
-            <a href="login.html" class="nav-links">Mujer</a>
-        </li>
-        <li class="nav-item">
-            <a href="login.html" class="nav-links"><i class="fas fa-sign-in-alt"></i></a>
-        </li>
-        <li class="nav-item">
-            <a href="cart.html" class="nav-links"><i class="fas fa-shopping-cart"></i></a>
-        </li>
-    </ul>
-  </nav>
-    <div class="container">
-      <div class="heading">
-        <h1 class="interes">Recuperar Contraseña</h1>
-      </div>
-      <div class="row">
-        <div class="card-ingreso">
-          <div class="card-body">
-                <form class="registration-form" action="/submit_form" method="POST">
-                <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" required>
-                </div>
-                <button class="btn" type="submit">Recuperar</button>
-                </form>
-                <p class="center">Te la acordaste? <a href="login.html">Iniciar Sesión</a></p>
-          </div>
+    <nav class="navbar">
+        <div class="logo first-child">
+            <a href="index.html"><img src="img/logo.png" title="Home" alt="Logo"></a>
         </div>
-      </div>
+        <span id="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <ul id="main-nav">
+            <li class="nav-item">
+                <a href="category.html?category=electronics" class="nav-links">Electrónica</a>
+            </li>
+            <li class="nav-item">
+                <a href="category.html?category=jewelery" class="nav-links">Accesorios</a>
+            </li>
+            <li class="nav-item">
+                <a href="category.html?category=men's clothing" class="nav-links">Hombre</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.html" class="nav-links">Mujer</a>
+            </li>
+            <li class="nav-item">
+                <a href="login.html" class="nav-links"><i class="fas fa-sign-in-alt"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="cart.html" class="nav-links"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="heading">
+            <h1 class="interes">Recuperar Contraseña</h1>
+        </div>
+        <div class="row">
+            <div class="card-ingreso">
+                <div class="card-body">
+                    <form id="recover-form" action="/submit_form" method="POST">
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            <span id="email-error" class="error-message"></span>
+                        </div>
+                        <div class="div-recover">
+                            <input type="checkbox" id="recover" name="confirmacion" required>
+                            <label for="recover">Quiero recuperar mi contraseña</label>
+                            <span id="confirmacion-error" class="error-message"></span>
+                        </div>
+                        <button class="btn recover" type="submit">Recuperar</button>
+                    </form>
+                    <p class="center">Te la acordaste? <a href="login.html">Iniciar Sesión</a></p>
+                    <div id="success-message" class="hidden">
+                        Recibirás un email con las instrucciones para recuperar tu contraseña.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="footer">
-      <div class="footer-item interes">Octavio Guerra</div>
-      <div class="footer-item interes">Ariel Lehrer</div>
-      <div class="footer-item interes">Jonatan Maciel</div>
+        <div class="footer-item interes">Octavio Guerra</div>
+        <div class="footer-item interes">Ariel Lehrer</div>
+        <div class="footer-item interes">Jonatan Maciel</div>
     </footer>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-      crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-  </body>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <script src="js/recover.js"></script>
+</body>
+
 </html>
