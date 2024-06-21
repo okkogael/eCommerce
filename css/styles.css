@@ -388,8 +388,6 @@ img.card-header {
   color: #555;
 }
 
-/* Nuevas reglas entrega II */ 
-
 .titulo-producto {
   height: 70px; /* Ajusta la altura según sea necesario */
   overflow: hidden;
@@ -406,6 +404,7 @@ img.card-header {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Número de líneas permitidas */
   -webkit-box-orient: vertical;
+  font-size: 12px /* Hacemos que el texto sea mas chico para ver mas contenido */
 }
 
 #product-description {

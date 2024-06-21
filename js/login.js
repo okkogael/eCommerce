@@ -1,13 +1,29 @@
+let mainNav=document.getElementById('main-nav');
+let navbarToggle=document.getElementById('navbar-toggle');
+
+navbarToggle.addEventListener('click',function(){
+
+    if(this.classList.contains('active')){
+        mainNav.style.display="none";
+        this.classList.remove('active');
+    }
+    else{
+        mainNav.style.display="flex";
+        this.classList.add('active');
+
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    var form = document.querySelector('.registration-form');
-    var emailInput = document.getElementById('email');
-    var passwordInput = document.getElementById('password');
+    let form = document.querySelector('.registration-form');
+    let emailInput = document.getElementById('email');
+    let passwordInput = document.getElementById('password');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
-        var email = emailInput.value.trim();
-        var password = passwordInput.value.trim();
+        let email = emailInput.value.trim();
+        let password = passwordInput.value.trim();
 
         if (email === "") {
             alert("Por favor complete el campo email");

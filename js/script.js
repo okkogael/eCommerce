@@ -15,8 +15,8 @@ navbarToggle.addEventListener('click',function(){
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var baseUrl = 'https://fakestoreapi.com/products/category/';
-    var categories = {
+    let baseUrl = 'https://fakestoreapi.com/products/category/';
+    let categories = {
         'electronics': 'Electrónica',
         'jewelery': 'Accesorios',
         "men's clothing": 'Ropa de Hombre',
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(function(products) {
-                var section = document.getElementById(category);
+                let section = document.getElementById(category);
                 if (section) {
-                    for (var i = 0; i < products.length; i++) {
-                        var product = products[i];
-                        var card = document.createElement('div');
+                    for (let i = 0; i < products.length; i++) {
+                        let product = products[i];
+                        let card = document.createElement('div');
                         card.className = 'card';
                         card.innerHTML = '<a href="producto.html?id=' + product.id + '" title="Ver Más">' +
                                          '<div class="card-header" style="background-image: url(\'' + product.image + '\');"></div>' +
@@ -52,16 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    var categoryLinks = document.querySelectorAll('.categoria');
-    for (var i = 0; i < categoryLinks.length; i++) {
+    let categoryLinks = document.querySelectorAll('.categoria');
+    for (let i = 0; i < categoryLinks.length; i++) {
         categoryLinks[i].addEventListener('click', function(event) {
             event.preventDefault();
-            var category = this.getAttribute('data-category');
+            let category = this.getAttribute('data-category');
             window.location.href = 'category.html?category=' + category;
         });
     }
 
-    for (var category in categories) {
+    for (let category in categories) {
         fetchCategoryData(category);
     }
 });

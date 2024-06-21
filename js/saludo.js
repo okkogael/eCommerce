@@ -1,42 +1,36 @@
-// Porque somos mas originales, hicimos algo mas lindo, no se preocupen, esta aclarado en el README.
 document.addEventListener('DOMContentLoaded', function() {
-    var userEmail = localStorage.getItem('userEmail');
-    var navbar = document.getElementById('main-nav');
-    var loginLink = navbar.querySelector('a[href="login.html"]');
-    var registerLink = navbar.querySelector('a[href="register.html"]');
+    let userEmail = localStorage.getItem('userEmail');
+    let navbar = document.getElementById('main-nav');
+    let loginLink = navbar.querySelector('a[href="login.html"]');
+    let registerLink = navbar.querySelector('a[href="register.html"]');
 
     if (userEmail) {
         // Obtener el nombre de usuario antes del '@'
-        var userName = userEmail.split('@')[0];
-
-        // Crear elemento de bienvenida
-        var welcomeMessage = document.createElement('li');
-        welcomeMessage.className = 'nav-item';
+        let userName = userEmail.split('@')[0];
 
         // Crear enlace con icono de Font Awesome para logout
-        var logoutLink = document.createElement('li');
+        let logoutLink = document.createElement('li');
         logoutLink.className = 'nav-item';
         logoutLink.innerHTML = `
             <a href="#" class="nav-links" id="logout">
-                <i class="fas fa-sign-out-alt"></i>
+                <i class="fas fa-sign-out-alt"></i> ¡Bienvenido ${userName}!
             </a>
         `;
-
-        // Insertar elementos en la barra de navegación
-        if (loginLink && loginLink.parentElement) {
-            loginLink.parentElement.insertBefore(logoutLink, loginLink.nextSibling);
-            loginLink.style.display = 'none';
+        // Insertar el nuevo enlace de logout después del enlace de login
+        if (loginLink) {
+            navbar.insertBefore(logoutLink, loginLink.parentElement.nextSibling);
+            loginLink.parentElement.style.display = 'none';
         }
         
         if (registerLink) {
-            registerLink.style.display = 'none';
+            registerLink.parentElement.style.display = 'none';
         }
 
         // Añadir funcionalidad de logout con confirmación
-        var logoutIcon = document.getElementById('logout');
+        let logoutIcon = document.getElementById('logout');
         logoutIcon.addEventListener('click', function(event) {
             event.preventDefault();
-            var confirmLogout = confirm(`Hola ${userName} ¿Seguro que queres cerrar sesión?`);
+            let confirmLogout = confirm(`Hola ${userName} ¿Seguro que queres cerrar sesión?`);
             if (confirmLogout) {
                 localStorage.removeItem('userEmail');
                 window.location.reload();
